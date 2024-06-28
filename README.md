@@ -1,4 +1,4 @@
-# Quick install
+# Quick install Odoo 12 with one command (supports multiple odoo instances on one server)
 
 Installing Odoo 12 with one command.
 
@@ -7,18 +7,18 @@ Installing Odoo 12 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/minhng92/odoo-12-docker-compose/master/run.sh | sudo bash -s odoo-one 10012 20012
+curl -s https://raw.githubusercontent.com/mberjawi/odoo12-docker/master/run.sh | sudo bash -s odoo-one 10012 20012
 ```
 
-to set up first Odoo instance @ `localhost:10012` (default master password: `minhng.info`)
+to set up first Odoo instance @ `localhost:10012` (default master password: `marwanberjawi.com`)
 
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/minhng92/odoo-12-docker-compose/master/run.sh | sudo bash -s odoo-two 11012 21012
+curl -s https://raw.githubusercontent.com/mberjawi/odoo12-docker/master/run.sh | sudo bash -s odoo-two 11012 21012
 ```
 
-to set up another Odoo instance @ `localhost:11012` (default master password: `minhng.info`)
+to set up another Odoo instance @ `localhost:11012` (default master password: `marwanberjawi.com`)
 
 Some arguments:
 * First argument (**odoo-one**): Odoo deploy folder
@@ -56,7 +56,7 @@ docker-compose up -d
 **If you get the permission issue**, change the folder permission to make sure that the container is able to access the directory:
 
 ``` sh
-$ git clone https://github.com/minhng92/odoo-12-docker-compose
+$ git clone https://github.com/mberjawi/odoo12-docker
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 $ mkdir -p postgresql
